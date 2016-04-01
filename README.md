@@ -10,10 +10,10 @@ This project uses [Terraform](http://terraform.io/) to construct EC2 instances s
 * Development and testing was done on [Ubuntu Linux](http://www.ubuntu.com/)
 
 #Building
-TODO
+Since this a collection of Terraform data files, there is nothing to build.
 
 #Installation
-TODO
+Only the prerequisites have to be installed.
 
 #Tips and Tricks
 TODO
