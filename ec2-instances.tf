@@ -72,3 +72,21 @@ module "alpha" {
     private_ip = "10.0.2.200"
     subnet_id = "subnet-0ebf9e6b"
 }
+
+module "bravo" {
+    source = "github.com/kurron/terraform-modules/aws/instance/well-known"
+    name = "Bravo Consul Server"
+    realm = "${var.realm}"
+    purpose = "${var.purpose}"
+    managed_by = "${var.managed_by}"
+
+    image_id = "${lookup(var.aws_amis, var.aws_region)}"
+    instance_type = "${var.instance_type}"
+    key_name = "${var.key_name}"
+    security_groups = "${var.docker_security_group}"
+    ebs_optimized = false
+    user_data = "${var.server_user_data}"
+    private_ip = "10.0.0.200"
+    subnet_id = "subnet-7181c606"
+}
+
